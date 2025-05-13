@@ -100,3 +100,33 @@ document.addEventListener('DOMContentLoaded', function () {
         copyrightElement.textContent = `© ${year} Frontend Developer Portfolio. All rights reserved.`;
     }
 }); 
+ // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme preference or use system preference
+    const currentTheme = localStorage.getItem('theme') || 
+                        (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    // Apply the current theme
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    } else {
+        body.classList.remove('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+    }
+    
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-theme')) {
+            body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        } else {
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        }
+    });
