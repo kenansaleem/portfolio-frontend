@@ -1,48 +1,44 @@
-# Frontend Developer Portfolio
+# AXIOM — Frontend Developer Portfolio
 
-A modern, responsive portfolio website built with HTML5, CSS3, JavaScript, and Bootstrap. This website showcases the skills and projects of a frontend developer.
+A bold, neo-brutalist portfolio website that redefines the conventional developer portfolio aesthetic. Built with vanilla HTML, CSS, and JavaScript with a distinctive design philosophy.
+
+## Design Philosophy
+
+**Aesthetic Direction: Neo-Brutalist Editorial**
+
+This portfolio breaks away from the sea of generic "AI slop" portfolios by embracing:
+- **High-contrast color palette**: Deep charcoal (#0a0a0a) with electric lime (#ccff00) and warm amber (#ffb800) accents
+- **Bold typography**: Bebas Neue for display, Syne for headings, Space Mono for body text
+- **Dramatic spatial composition**: Grid-breaking layouts, asymmetric elements, generous negative space
+- **Atmospheric depth**: Noise/grain textures, gradient overlays, layered elements
+- **Orchestrated motion**: Staggered entrance animations, smooth hover transitions, custom cursor
 
 ## Features
 
-- Responsive design that works on all devices
-- Modern and clean UI with smooth animations
-- Interactive sections for skills, projects, and contact
-- Smooth scrolling navigation
-- Form validation and submission handling
-- Dynamic copyright year update
-- Intersection Observer for scroll animations
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Bootstrap 5
-- Font Awesome icons
-- Intersection Observer API
+- **Custom Cursor**: Interactive cursor with dot and outline elements that respond to hover states
+- **Theme Toggle**: Light/dark mode with localStorage persistence and system preference detection
+- **Scroll Animations**: Intersection Observer-powered reveal animations with staggered delays
+- **Mobile Responsive**: Fully responsive design with custom hamburger menu
+- **Contact Form**: Firebase-powered form for message storage
+- **Performance**: No framework dependencies, pure vanilla implementation
 
 ## Sections
 
-1. **Hero Section**: A full-screen landing page with a call-to-action button
-2. **About Section**: Brief introduction and professional background
-3. **Skills Section**: Showcase of technical skills with icons
-4. **Projects Section**: Portfolio of recent work
-5. **Contact Section**: Contact form for potential clients
-6. **Footer**: Social media links and copyright information
+1. **Hero**: Full-viewport with animated title reveals, CTA buttons, decorative elements
+2. **About**: Split layout with stats counter and editorial imagery
+3. **Skills**: Grid of skill cards with progress bars and hover effects
+4. **Projects**: Asymmetric project cards with image overlays and tags
+5. **Contact**: Split layout with social links and Firebase-powered form
+6. **Footer**: Minimal footer with social icons
 
-## Getting Started
+## Tech Stack
 
-1. Clone the repository
-2. Open `index.html` in your web browser
-3. Customize the content to match your personal information
-
-## Customization
-
-- Replace placeholder images with your own
-- Update the text content in each section
-- Modify the color scheme in `styles.css`
-- Add your own social media links
-- Update the projects section with your work
+- **HTML5**: Semantic markup with accessibility in mind
+- **CSS3**: Custom properties, Grid/Flexbox, CSS animations
+- **JavaScript**: ES6+ with Intersection Observer API
+- **Firebase**: Realtime Database for contact form
+- **Google Fonts**: Bebas Neue, Syne, Space Mono
+- **Font Awesome**: Icon library
 
 ## Browser Support
 
@@ -50,8 +46,33 @@ A modern, responsive portfolio website built with HTML5, CSS3, JavaScript, and B
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
-- Opera (latest)
+
+## Customization
+
+### Colors
+Edit CSS variables in `styles.css`:
+```css
+--accent-primary: #ccff00;
+--accent-secondary: #ffb800;
+--bg-primary: #0a0a0a;
+```
+
+### Fonts
+The design uses three font families:
+- **Bebas Neue** - Display text
+- **Syne** - Headings
+- **Space Mono** - Body text
+
+Replace in the Google Fonts import link in `index.html`.
+
+## Getting Started
+
+1. Open `index.html` in your browser
+2. Customize content in each section
+3. Update Firebase config in `index.html` (lines 14-16)
+4. Replace project images with your own
+5. Update social links in the contact section
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE). 
+MIT License
