@@ -72,7 +72,12 @@ body {
     color: var(--text-primary);
     line-height: 1.7;
     overflow-x: hidden;
-    cursor: none;
+}
+
+@media (pointer: fine) {
+    body {
+        cursor: none;
+    }
 }
 
 /* Noise Overlay */
@@ -100,35 +105,37 @@ body {
     background: radial-gradient(ellipse at 50% 50%, transparent 0%, var(--bg-primary) 100%);
 }
 
-/* Custom Cursor */
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--accent-primary);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 10000;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease, opacity 0.1s ease;
-}
+/* Custom Cursor — only on devices with a fine pointer (mouse) */
+@media (pointer: fine) {
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--accent-primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 10000;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease, opacity 0.1s ease;
+    }
 
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--accent-primary);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
-}
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--accent-primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    }
 
-body.hovering .cursor-outline {
-    width: 60px;
-    height: 60px;
-    border-color: var(--accent-secondary);
+    body.hovering .cursor-outline {
+        width: 60px;
+        height: 60px;
+        border-color: var(--accent-secondary);
+    }
 }
 
 /* =============================================
